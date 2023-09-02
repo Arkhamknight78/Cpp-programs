@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int fillArr(int a[100][100],int n, int m){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>a[i][j];
+        }
+    }
+return 0;
+}
+int Waveprint(int a[100][100],int n,int m){
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+            for(int j=0;j<m;j++){
+                cout<<a[i][j]<<", ";
+            }
+        }
+        else{
+            for(int j=m-1;j>=0;j--){
+                cout<<a[i][j]<<", ";
+            }
+        }
+    }
+    cout<<"END";
+    return 0;
+}
+
+
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+        int a[100][100];
+    fillArr(a,n,m);
+    Waveprint(a, n, m);
+return 0;
+}
